@@ -24,7 +24,7 @@ class Roots
    
    public static void calculate_roots(double a, double b, double c)
    {
-      double q, r;
+      double q;
       
       q = b*b - 4*a*c;
      
@@ -36,26 +36,27 @@ class Roots
       if (a != 0) {
 	      if(q>0 )
 	      {
-		      roots = Root_Types.Equal_roots; 
+	    	  /*tow roots*/
+		      roots = Root_Types.Two_roots; 
 	      }
 	      else if(q==0)
 	      {
 		      // the equation has exactly one root
 		     
-		     
-		      roots = Root_Types.Two_roots; 
+		     /*equal roots*/
+		      roots = Root_Types.Equal_roots; 
 		      
 	      } 
 	      else
 	      {
 		      // the equation has no roots if b^2 < 4ac
-		     
-		      roots = Root_Types.Not_quadratic;
+		     /*no root*/
+		      roots = Root_Types.No_roots;
 	      }
       }
       else {
-    	  
-    	  roots = Root_Types.Two_roots; 
+    	  /*no quadretic*/
+    	  roots = Root_Types.Not_quadratic; 
       }
    }
 
