@@ -8,48 +8,52 @@ public class RootsTest
 	Roots root;
 
 	@Test
-	public void testPartion1() 
+	public void Bva_a_min() 
 	{
-		Roots.calculate_roots(-2, 1, 2);
+		Roots.calculate_roots(0, 2, 8);
 		
-		String  root_expected = Root_Types.ERROR.toString();
+		String  root_expected = Root_Types.Not_quadratic.toString();
 		
 		
 		assertEquals(root_expected, Roots.root_types().toString());
 	}
+	
 	@Test
-	public void Two_roots() 
+	public void Bva_a_minPlus1() 
 	{
-		Roots.calculate_roots(2, 50,10);
+		Roots.calculate_roots(1, 5,5);
 		
 		String  root_expected = Root_Types.Two_roots.toString();
 
 		assertEquals(root_expected, Roots.root_types().toString());
 	}
+	
 	@Test
-	public void Equal_roots() 
+	public void Bva_a_nominal() 
 	{
-		Roots.calculate_roots(1,20,100);
+		Roots.calculate_roots(3,6,3);
 		
 		String  root_expected = Root_Types.Equal_roots.toString();
 
 		assertEquals(root_expected, Roots.root_types().toString());
 	}
+	
 	@Test
-	public void No_roots() 
+	public void Bva_a_maxMinus1() 
 	{
-		Roots.calculate_roots(1,1,100);
+		Roots.calculate_roots(49,5,34);
 		
 		String  root_expected = Root_Types.No_roots.toString();
 
 		assertEquals(root_expected, Roots.root_types().toString());
 	}
+	
 	@Test
-	public void Not_quadratic() 
+	public void Bva_a_max() 
 	{
-		Roots.calculate_roots(0,4,3);
+		Roots.calculate_roots(50,-4,3);
 		
-		String  root_expected = Root_Types.Not_quadratic.toString();
+		String  root_expected = Root_Types.ERROR.toString();
 
 		assertEquals(root_expected, Roots.root_types().toString());
 	}
